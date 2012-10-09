@@ -28,21 +28,21 @@ disconnect
 ----------
 This method simply disconnects you from the server, but does not exit the PHP script.
 Ensure that 'channel' is set to the current channel!
-> disconnect("bye bye!", "##programmers");
+> $irc->disconnect("bye bye!", "##programmers");
 
 joinChannel
 -----------
 This method joins a channel. It should only be called on join of the server. For changing channels, use changeChannel.
-> joinChannel("##programmers");
+> $irc->joinChannel("##programmers");
 
 changeChannel
 -------------
 This function moves you from one channel to another. You need to pass it the old and new channel names.
-> changeChannel("##programmers", "#freenode");
+> $irc->changeChannel("##programmers", "#freenode");
 
 rawCommand
 ----------
 This sends a raw command to the server, such as `PRIVMSG tcial :Howdy!` or `NOTICE tcial :Hello!`.
-> rawCommand("PRIVMSG tcial :Hello World!");
+> $irc->rawCommand("PRIVMSG tcial :Hello World!");
 
 If you have any problems or questions, please don't hesitate to use the **issue tracker**!
